@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learn ASL! 🤟</title>
+<meta name="description" content="Friendly links to the best places to learn American Sign Language: websites, apps, dictionaries, and Bill Vicars videos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #fff8e7;
+    --paper: #fffdf6;
+    --ink: #2b2140;
+    --ink-soft: #5b4f74;
+    --coral: #ff6b6b;
+    --sun: #ffd93d;
+    --mint: #6bcb77;
+    --sky: #4d96ff;
+    --grape: #9b5de5;
+    --peach: #ffb347;
+    --border: 4px;
+    --radius: 28px;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--cream);
+    background-image:
+      radial-gradient(circle at 12% 18%, rgba(255, 217, 61, .35) 0, transparent 220px),
+      radial-gradient(circle at 88% 12%, rgba(107, 203, 119, .30) 0, transparent 240px),
+      radial-gradient(circle at 80% 85%, rgba(77, 150, 255, .28) 0, transparent 260px),
+      radial-gradient(circle at 10% 90%, rgba(255, 107, 107, .28) 0, transparent 240px),
+      radial-gradient(rgba(43, 33, 64, .07) 2px, transparent 2.5px);
+    background-size: auto, auto, auto, auto, 32px 32px;
+    color: var(--ink);
+    font-family: 'Nunito', 'Segoe UI', sans-serif;
+    font-size: 22px;
+    line-height: 1.5;
+    min-height: 100vh;
+  }
+
+  a { color: inherit; }
+
+  h1, h2, h3 {
+    font-family: 'Fredoka', 'Nunito', sans-serif;
+    margin: 0;
+    line-height: 1.1;
+  }
+
+  main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 5rem;
+  }
+
+  /* ---------- Hero ---------- */
+  header {
+    text-align: center;
+    padding: 2.5rem 0 3rem;
+    animation: pop .7s cubic-bezier(.2, 1.4, .4, 1) both;
+  }
+
+  .hands {
+    font-size: clamp(4rem, 12vw, 7.5rem);
+    line-height: 1;
+    display: inline-block;
+    animation: wave 2.6s ease-in-out infinite;
+    transform-origin: 70% 80%;
+    filter: drop-shadow(0 8px 0 rgba(43, 33, 64, .15));
+  }
+
+  h1 {
+    font-size: clamp(3rem, 9vw, 5.5rem);
+    font-weight: 700;
+    margin-top: .5rem;
+    letter-spacing: -.01em;
+  }
+
+  h1 span { display: inline-block; }
+  h1 .c1 { color: var(--coral); }
+  h1 .c2 { color: var(--sky); }
+  h1 .c3 { color: var(--mint); }
+  h1 .c4 { color: var(--grape); }
+
+  .tagline {
+    font-size: clamp(1.25rem, 3vw, 1.7rem);
+    font-weight: 700;
+    color: var(--ink-soft);
+    max-width: 34ch;
+    margin: 1rem auto 0;
+  }
+
+  /* ---------- Jump buttons ---------- */
+  .jump {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .9rem;
+    margin: 0 0 3.5rem;
+    padding: 0;
+    list-style: none;
+  }
+
+  .jump a {
+    display: inline-block;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    text-decoration: none;
+    background: var(--paper);
+    border: var(--border) solid var(--ink);
+    border-radius: 999px;
+    padding: .6rem 1.4rem;
+    box-shadow: 0 5px 0 var(--ink);
+    transition: transform .12s ease, box-shadow .12s ease;
+  }
+
+  .jump a:hover, .jump a:focus-visible {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 0 var(--ink);
+    outline: none;
+  }
+
+  .jump a:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 var(--ink);
+  }
+
+  /* ---------- Sections ---------- */
+  section {
+    margin-bottom: 4.5rem;
+    animation: pop .7s cubic-bezier(.2, 1.4, .4, 1) both;
+  }
+
+  section:nth-of-type(1) { animation-delay: .15s; }
+  section:nth-of-type(2) { animation-delay: .3s; }
+  section:nth-of-type(3) { animation-delay: .45s; }
+  section:nth-of-type(4) { animation-delay: .6s; }
+
+  .section-head {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: .75rem;
+  }
+
+  .section-head .badge {
+    font-size: 3rem;
+    line-height: 1;
+    width: 5rem;
+    height: 5rem;
+    display: grid;
+    place-items: center;
+    border: var(--border) solid var(--ink);
+    border-radius: 22px;
+    background: var(--paper);
+    box-shadow: 5px 5px 0 var(--ink);
+    flex-shrink: 0;
+    transform: rotate(-4deg);
+  }
+
+  h2 {
+    font-size: clamp(2.2rem, 6vw, 3.4rem);
+    font-weight: 700;
+  }
+
+  .section-blurb {
+    font-size: 1.25rem;
+    color: var(--ink-soft);
+    font-weight: 700;
+    margin: 0 0 1.75rem;
+    max-width: 60ch;
+  }
+
+  /* ---------- Cards ---------- */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.6rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    text-decoration: none;
+    background: var(--paper);
+    border: var(--border) solid var(--ink);
+    border-radius: var(--radius);
+    padding: 1.6rem 1.6rem 1.5rem;
+    box-shadow: 8px 8px 0 var(--card-color);
+    position: relative;
+    overflow: hidden;
+    transition: transform .15s ease, box-shadow .15s ease;
+    min-height: 100%;
+  }
+
+  .card::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 14px;
+    background: var(--card-color);
+  }
+
+  .card:hover, .card:focus-visible {
+    transform: translate(-4px, -4px) rotate(-.6deg);
+    box-shadow: 14px 14px 0 var(--card-color);
+    outline: none;
+  }
+
+  .card:active {
+    transform: translate(3px, 3px);
+    box-shadow: 3px 3px 0 var(--card-color);
+  }
+
+  .card .icon {
+    font-size: 3.2rem;
+    line-height: 1;
+    margin-top: .3rem;
+  }
+
+  .card h3 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  .card p {
+    margin: 0;
+    font-size: 1.15rem;
+    color: var(--ink-soft);
+    font-weight: 700;
+    flex-grow: 1;
+  }
+
+  .card .go {
+    margin-top: .75rem;
+    align-self: flex-start;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    font-size: 1.15rem;
+    color: var(--ink);
+    background: var(--card-color);
+    border: 3px solid var(--ink);
+    border-radius: 999px;
+    padding: .35rem 1.1rem;
+  }
+
+  .span-all {
+    grid-column: 1 / -1;
+  }
+
+  .card.big h3 { font-size: clamp(2.2rem, 5vw, 3rem); }
+  .card.big .icon { font-size: 4.5rem; }
+
+  .coral { --card-color: var(--coral); }
+  .sun   { --card-color: var(--sun); }
+  .mint  { --card-color: var(--mint); }
+  .sky   { --card-color: var(--sky); }
+  .grape { --card-color: var(--grape); }
+  .peach { --card-color: var(--peach); }
+
+  /* ---------- Note / footer ---------- */
+  .note {
+    background: var(--paper);
+    border: var(--border) dashed var(--ink);
+    border-radius: var(--radius);
+    padding: 1.4rem 1.6rem;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--ink-soft);
+    text-align: center;
+    max-width: 62ch;
+    margin: 0 auto;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 1rem;
+    color: var(--ink-soft);
+    font-weight: 700;
+  }
+
+  footer a { text-decoration-thickness: 3px; text-underline-offset: 4px; }
+
+  /* ---------- Motion ---------- */
+  @keyframes wave {
+    0%, 100% { transform: rotate(0deg); }
+    20%      { transform: rotate(14deg); }
+    40%      { transform: rotate(-8deg); }
+    60%      { transform: rotate(12deg); }
+    80%      { transform: rotate(-4deg); }
+  }
+
+  @keyframes pop {
+    from { opacity: 0; transform: translateY(24px) scale(.97); }
+    to   { opacity: 1; transform: none; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hands, header, section { animation: none; }
+    .card, .jump a { transition: none; }
+  }
+
+  @media (max-width: 480px) {
+    body { font-size: 20px; }
+    .card { padding: 1.3rem 1.3rem 1.25rem; }
+    .section-head .badge { width: 4rem; height: 4rem; font-size: 2.4rem; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <header>
+    <div class="hands" aria-hidden="true">🤟</div>
+    <h1>
+      <span class="c1">Let's</span>
+      <span class="c2">Learn</span>
+      <span class="c3">Sign</span>
+      <span class="c4">Language!</span>
+    </h1>
+    <p class="tagline">Great places to learn American Sign Language (ASL). Pick one and start signing!</p>
+  </header>
+
+  <ul class="jump">
+    <li><a href="#vicars">👨‍🏫 Bill Vicars</a></li>
+    <li><a href="#dictionaries">📖 Dictionaries</a></li>
+    <li><a href="#websites">🌐 Websites</a></li>
+    <li><a href="#apps">📱 Apps</a></li>
+  </ul>
+
+  <!-- ===== Bill Vicars ===== -->
+  <section id="vicars">
+    <div class="section-head">
+      <div class="badge" aria-hidden="true">👨‍🏫</div>
+      <h2>Bill Vicars</h2>
+    </div>
+    <p class="section-blurb">Dr. Bill Vicars is a Deaf teacher who makes free ASL videos and lessons. He is kind, clear, and fun to learn from.</p>
+    <ul class="cards">
+      <li class="span-all">
+        <a class="card big coral" href="https://www.youtube.com/watch?v=ianCxd71xIo&list=FLvd8SHzSp07_U55qFI0-dDA" target="_blank" rel="noopener">
+          <div class="icon" aria-hidden="true">▶️</div>
+          <h3>100 Basic Signs</h3>
+          <p>Start here! Learn 100 everyday signs with Bill in one video. Watch it, pause it, and sign along.</p>
+          <span class="go">Watch on YouTube →</span>
+        </a>
+      </li>
+      <li>
+        <a class="card sun" href="https://www.lifeprint.com/" target="_blank" rel="noopener">
+          <div class="icon" aria-hidden="true">🎓</div>
+          <h3>Lifeprint / ASL University</h3>
+          <p>Bill's website with free lessons, a sign dictionary, and fingerspelling practice.</p>
+          <span class="go">Visit Lifeprint →</span>
+        </a>
+      </li>
+      <li>
+        <a class="card sky" href="https://www.youtube.com/user/billvicars" target="_blank" rel="noopener">
+          <div class="icon" aria-hidden="true">📺</div>
+          <h3>Bill's YouTube Channel</h3>
+          <p>Hundreds more videos: lessons, stories, and vocabulary.</p>
+          <span class="go">See all videos →</span>
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ===== Dictionaries ===== -->
+  <section id="dictionaries">
+    <div class="section-head">
+      <div class="badge" aria-hidden="true">📖</div>
+      <h2>Sign Dictionaries</h2>
+    </div>
+    <p class="section-blurb">Wondering how to sign a word? Type it in and watch a video of the sign.</p>
+    <ul class="cards">
+      <li>
+        <a class="card mint" href="https://www.handspeak.com/" target="_blank" rel="noopener">
+          <div class="icon" aria-hidden="true">✋</div>
+          <h3>Handspeak</h3>
+          <p>A big ASL dictionary made by a Deaf author. Look up words, learn the ASL alphabet, and read about Deaf culture.</p>
+          <span class="go">Open Handspeak →</span>
+        </a>
+      </li>
+      <li>
+        <a class="card grape" href="https://www.signingsavvy.com/" target="_blank" rel="noopener">
+          <div class="icon" aria-hidden="true">🔍</div>
+          <h3>Signing Savvy</h3>
+          <p>Search any word and see a clear video of the sign. Great for finding new words fast.</p>
+          <span class="go">Open Signing Savvy →</span>
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ===== Websites ===== -->
+  <section id="websites">
+    <div class="section-head">
+      <div class="badge" aria-hidden="true">🌐</div>
+      <h2>Learning Websites</h2>
+    </div>
+    <p class="section-blurb">Free lessons and games you can use on a computer or tablet.</p>
+    <ul class="cards">
+      <li>
+        <a class="card peach" href="https://www.gallaudet.edu/asl-connect/" target="_blank" rel="noopener">
+          <div class="icon" aria-hidden="true">🏫</div>
+          <h3>ASL Connect</h3>
+          <p>Free ASL lessons from Gallaudet University, the world's famous university for Deaf students.</p>
+          <span class="go">Visit ASL Connect →</span>
+        </a>
+      </li>
+      <li>
+        <a class="card sky" href="https://www.signschool.com/" target="_blank" rel="noopener">
+          <div class="icon" aria-hidden="true">🎮</div>
+          <h3>SignSchool</h3>
+          <p>Learn signs with games, quizzes, and a "sign of the day."</p>
+          <span class="go">Visit SignSchool →</span>
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ===== Apps ===== -->
+  <section id="apps">
+    <div class="section-head">
+      <div class="badge" aria-hidden="true">📱</div>
+      <h2>Apps</h2>
+    </div>
+    <p class="section-blurb">Practice signs on a phone or tablet. Ask a grown-up to help install these.</p>
+    <ul class="cards">
+      <li>
+        <a class="card coral" href="https://theaslapp.com/" target="_blank" rel="noopener">
+          <div class="icon" aria-hidden="true">🤲</div>
+          <h3>The ASL App</h3>
+          <p>Made by Deaf people. Short, friendly video lessons in bite-sized bundles.</p>
+          <span class="go">Get The ASL App →</span>
+        </a>
+      </li>
+      <li>
+        <a class="card mint" href="https://www.lingvano.com/asl/" target="_blank" rel="noopener">
+          <div class="icon" aria-hidden="true">🦜</div>
+          <h3>Lingvano</h3>
+          <p>Learn ASL in little daily lessons, like a language game.</p>
+          <span class="go">Get Lingvano →</span>
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <p class="note">🤟 This page has no lessons of its own. It's just a list of favorite places to learn. Every link opens a different website.</p>
+
+  <footer>
+    <p>🤟 means "I Love You" in ASL &middot; <a href="https://johnesco.github.io/">Back to Johnesco</a></p>
+  </footer>
+
+</main>
+</body>
+</html>
