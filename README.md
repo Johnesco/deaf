@@ -1,4 +1,4 @@
-# Learn ASL! 🤟
+# Learn ASL!
 
 A big, friendly, one-page list of the best places to learn American Sign Language: videos, sign dictionaries, learning websites, and apps.
 
