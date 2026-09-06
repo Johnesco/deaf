@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>More ASL Links 📚</title>
+<meta name="description" content="A longer list of websites, video channels, and apps for learning American Sign Language.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #fff8e7;
+    --paper: #fffdf6;
+    --ink: #2b2140;
+    --ink-soft: #5b4f74;
+    --coral: #ff6b6b;
+    --sun: #ffd93d;
+    --mint: #6bcb77;
+    --sky: #4d96ff;
+    --grape: #9b5de5;
+    --peach: #ffb347;
+    --border: 4px;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--cream);
+    background-image: radial-gradient(rgba(43, 33, 64, .07) 2px, transparent 2.5px);
+    background-size: 32px 32px;
+    color: var(--ink);
+    font-family: 'Nunito', 'Segoe UI', sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    min-height: 100vh;
+  }
+
+  h1, h2 {
+    font-family: 'Fredoka', 'Nunito', sans-serif;
+    margin: 0;
+    line-height: 1.1;
+  }
+
+  main {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 5rem;
+  }
+
+  .back {
+    display: inline-block;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--ink);
+    background: var(--paper);
+    border: var(--border) solid var(--ink);
+    border-radius: 999px;
+    padding: .5rem 1.3rem;
+    box-shadow: 0 5px 0 var(--ink);
+    transition: transform .12s ease, box-shadow .12s ease;
+  }
+
+  .back:hover, .back:focus-visible {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 0 var(--ink);
+    outline: none;
+  }
+
+  .back:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 var(--ink);
+  }
+
+  header {
+    padding: 2rem 0 1.5rem;
+  }
+
+  h1 {
+    font-size: clamp(2.4rem, 7vw, 3.6rem);
+    font-weight: 700;
+  }
+
+  .intro {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--ink-soft);
+    margin: .75rem 0 0;
+    max-width: 58ch;
+  }
+
+  .toc {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .6rem;
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 2.5rem;
+  }
+
+  .toc a {
+    display: inline-block;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    text-decoration: none;
+    color: var(--ink);
+    background: var(--paper);
+    border: 3px solid var(--ink);
+    border-radius: 999px;
+    padding: .3rem 1rem;
+  }
+
+  .toc a:hover { background: var(--sun); }
+
+  section {
+    background: var(--paper);
+    border: var(--border) solid var(--ink);
+    border-radius: 24px;
+    padding: 1.5rem 1.75rem 1.25rem;
+    margin-bottom: 2rem;
+    box-shadow: 8px 8px 0 var(--accent);
+    position: relative;
+    overflow: hidden;
+  }
+
+  section::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 12px;
+    background: var(--accent);
+  }
+
+  h2 {
+    font-size: clamp(1.8rem, 5vw, 2.4rem);
+    font-weight: 700;
+    margin: .5rem 0 .25rem;
+  }
+
+  .sub {
+    margin: 0 0 1rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--ink-soft);
+  }
+
+  ul.links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  ul.links li {
+    padding: .85rem 0;
+    border-top: 2px dashed rgba(43, 33, 64, .18);
+  }
+
+  ul.links li:first-child { border-top: 0; }
+
+  ul.links a {
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    font-size: 1.35rem;
+    color: var(--ink);
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+    text-decoration-thickness: 4px;
+    text-underline-offset: 5px;
+  }
+
+  ul.links a:hover { text-decoration-color: var(--ink); }
+
+  ul.links .desc {
+    display: block;
+    margin-top: .2rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--ink-soft);
+  }
+
+  .kid {
+    display: inline-block;
+    margin-left: .5rem;
+    font-family: 'Fredoka', sans-serif;
+    font-size: .95rem;
+    font-weight: 600;
+    background: var(--sun);
+    border: 2px solid var(--ink);
+    border-radius: 999px;
+    padding: .05rem .6rem;
+    vertical-align: middle;
+    transform: translateY(-2px);
+  }
+
+  .coral { --accent: var(--coral); }
+  .sun   { --accent: var(--sun); }
+  .mint  { --accent: var(--mint); }
+  .sky   { --accent: var(--sky); }
+  .grape { --accent: var(--grape); }
+  .peach { --accent: var(--peach); }
+
+  .note {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--ink-soft);
+    text-align: center;
+    max-width: 60ch;
+    margin: 2rem auto 0;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 2.5rem;
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <a class="back" href="index.html">← Back to the main page</a>
+
+  <header>
+    <h1>📚 More ASL Links</h1>
+    <p class="intro">Every website, video channel, and app we found for learning American Sign Language. The ones with a 🧒 Kids badge are especially good for children.</p>
+  </header>
+
+  <ul class="toc">
+    <li><a href="#learn">Learning Websites</a></li>
+    <li><a href="#dict">Dictionaries</a></li>
+    <li><a href="#practice">Fingerspelling Practice</a></li>
+    <li><a href="#video">Video Channels</a></li>
+    <li><a href="#stories">Stories for Kids</a></li>
+    <li><a href="#apps">Apps</a></li>
+    <li><a href="#grownups">For Grown-ups</a></li>
+  </ul>
+
+  <section id="learn" class="coral">
+    <h2>Learning Websites</h2>
+    <p class="sub">Lessons, courses, and games.</p>
+    <ul class="links">
+      <li><a href="https://www.lifeprint.com/" target="_blank" rel="noopener">Lifeprint / ASL University</a><span class="desc">Dr. Bill Vicars' free lessons, dictionary, and fingerspelling practice.</span></li>
+      <li><a href="https://www.gallaudet.edu/asl-connect/" target="_blank" rel="noopener">ASL Connect</a><span class="desc">Free lessons from Gallaudet University.</span></li>
+      <li><a href="https://www.signschool.com/" target="_blank" rel="noopener">SignSchool</a><span class="kid">🧒 Kids</span><span class="desc">Free lessons, games, and a sign of the day.</span></li>
+      <li><a href="https://aslnook.com/" target="_blank" rel="noopener">ASL Nook</a><span class="kid">🧒 Kids</span><span class="desc">A Deaf family's short videos, made with their kids.</span></li>
+      <li><a href="https://www.signingtime.com/" target="_blank" rel="noopener">Signing Time</a><span class="kid">🧒 Kids</span><span class="desc">Rachel Coleman's songs and shows that teach signs. Subscription, with free videos on YouTube.</span></li>
+      <li><a href="https://signitasl.com/" target="_blank" rel="noopener">Sign It ASL</a><span class="desc">From the Signing Time creators, for older kids and adults. Free for families with deaf children.</span></li>
+      <li><a href="https://www.asldeafined.com/" target="_blank" rel="noopener">ASL Deafined</a><span class="kid">🧒 Kids</span><span class="desc">Subscription video lessons with kid-friendly units.</span></li>
+      <li><a href="https://www.learnhowtosign.org/" target="_blank" rel="noopener">Learn How to Sign</a><span class="desc">Meredith's beginner-focused site and YouTube channel.</span></li>
+      <li><a href="https://www.signlanguage101.com/" target="_blank" rel="noopener">Sign Language 101</a><span class="desc">Dr. Byron Bridges' free structured video course.</span></li>
+      <li><a href="https://www.startasl.com/" target="_blank" rel="noopener">Start ASL</a><span class="desc">A full course with free and paid levels.</span></li>
+      <li><a href="https://babysignlanguage.com/" target="_blank" rel="noopener">Baby Sign Language</a><span class="kid">🧒 Kids</span><span class="desc">Flashcards and a dictionary for babies and toddlers.</span></li>
+      <li><a href="https://aslcore.org/" target="_blank" rel="noopener">ASL Core</a><span class="desc">Signs for science, math, and engineering words.</span></li>
+    </ul>
+  </section>
+
+  <section id="dict" class="mint">
+    <h2>Dictionaries</h2>
+    <p class="sub">Type a word, watch the sign.</p>
+    <ul class="links">
+      <li><a href="https://www.handspeak.com/" target="_blank" rel="noopener">Handspeak</a><span class="desc">Big dictionary by a Deaf author, plus Deaf culture articles.</span></li>
+      <li><a href="https://www.signingsavvy.com/" target="_blank" rel="noopener">Signing Savvy</a><span class="desc">Clear video dictionary with word lists and quizzes.</span></li>
+      <li><a href="https://www.asl-kids.com/" target="_blank" rel="noopener">ASL Kids</a><span class="kid">🧒 Kids</span><span class="desc">Kids sign the words in this children's dictionary.</span></li>
+      <li><a href="https://www.spreadthesign.com/" target="_blank" rel="noopener">Spread the Sign</a><span class="desc">International dictionary with sign languages from many countries.</span></li>
+      <li><a href="https://www.aslpro.cc/" target="_blank" rel="noopener">ASLPro</a><span class="desc">Older video dictionary with a section for kids.</span></li>
+    </ul>
+  </section>
+
+  <section id="practice" class="sun">
+    <h2>Fingerspelling Practice</h2>
+    <p class="sub">Games for learning the ASL alphabet.</p>
+    <ul class="links">
+      <li><a href="https://fingerspelling.xyz/" target="_blank" rel="noopener">Fingerspelling.xyz</a><span class="desc">Uses your camera to check your handshapes as you spell.</span></li>
+      <li><a href="https://asl.ms/" target="_blank" rel="noopener">ASL.ms</a><span class="desc">Watch fingerspelled words and guess them. Adjustable speed.</span></li>
+      <li><a href="https://www.lifeprint.com/asl101/fingerspelling/" target="_blank" rel="noopener">Lifeprint Fingerspelling</a><span class="desc">Bill Vicars' fingerspelling lessons and practice.</span></li>
+    </ul>
+  </section>
+
+  <section id="video" class="sky">
+    <h2>Video Channels</h2>
+    <p class="sub">YouTube channels with free lessons.</p>
+    <ul class="links">
+      <li><a href="https://www.youtube.com/user/billvicars" target="_blank" rel="noopener">Bill Vicars</a><span class="desc">Hundreds of lessons, stories, and vocabulary videos.</span></li>
+      <li><a href="https://www.youtube.com/watch?v=ianCxd71xIo&list=FLvd8SHzSp07_U55qFI0-dDA" target="_blank" rel="noopener">100 Basic Signs</a><span class="desc">Bill's one-video starter pack.</span></li>
+      <li><a href="https://www.youtube.com/@SigningTime" target="_blank" rel="noopener">Signing Time</a><span class="kid">🧒 Kids</span><span class="desc">Songs and clips from the show.</span></li>
+      <li><a href="https://www.youtube.com/@ASLNook" target="_blank" rel="noopener">ASL Nook</a><span class="kid">🧒 Kids</span><span class="desc">The ASL Nook family's videos.</span></li>
+      <li><a href="https://www.youtube.com/@ASLThat" target="_blank" rel="noopener">ASL That</a><span class="desc">Vocabulary and phrases explained simply.</span></li>
+      <li><a href="https://www.youtube.com/@LearnHowtoSign" target="_blank" rel="noopener">Learn How to Sign</a><span class="desc">Meredith's beginner lessons.</span></li>
+      <li><a href="https://www.youtube.com/@ASLRochelle" target="_blank" rel="noopener">ASL Rochelle</a><span class="desc">Vocabulary and Deaf culture videos.</span></li>
+      <li><a href="https://www.youtube.com/@ASLStew" target="_blank" rel="noopener">ASL Stew</a><span class="desc">A Deaf and hearing couple's lessons and stories.</span></li>
+    </ul>
+  </section>
+
+  <section id="stories" class="grape">
+    <h2>Stories for Kids</h2>
+    <p class="sub">Books and tales told in ASL.</p>
+    <ul class="links">
+      <li><a href="https://vl2storybookapps.com/" target="_blank" rel="noopener">VL2 Storybook Apps</a><span class="kid">🧒 Kids</span><span class="desc">Gallaudet's ASL and English storybook apps.</span></li>
+      <li><a href="https://play.google.com/store/search?q=ASL%20Tales&c=apps" target="_blank" rel="noopener">ASL Tales</a><span class="kid">🧒 Kids</span><span class="desc">Illustrated stories signed in ASL.</span></li>
+      <li><a href="https://www.youtube.com/results?search_query=ASL+storytelling+for+kids" target="_blank" rel="noopener">ASL storytelling on YouTube</a><span class="kid">🧒 Kids</span><span class="desc">Search results for children's stories told in ASL.</span></li>
+    </ul>
+  </section>
+
+  <section id="apps" class="peach">
+    <h2>Apps</h2>
+    <p class="sub">For phones and tablets. Ask a grown-up to help install.</p>
+    <ul class="links">
+      <li><a href="https://www.aslbloom.com/" target="_blank" rel="noopener">ASL Bloom</a><span class="kid">🧒 Kids</span><span class="desc">Gamified beginner lessons. iOS and Android.</span></li>
+      <li><a href="https://theaslapp.com/" target="_blank" rel="noopener">The ASL App</a><span class="desc">Bite-sized video lessons by Deaf creators. iOS and Android.</span></li>
+      <li><a href="https://www.lingvano.com/asl/" target="_blank" rel="noopener">Lingvano</a><span class="desc">Daily lessons like a language game. iOS and Android, subscription.</span></li>
+      <li><a href="https://www.signschool.com/" target="_blank" rel="noopener">SignSchool</a><span class="kid">🧒 Kids</span><span class="desc">App version of the website.</span></li>
+      <li><a href="https://www.asl-kids.com/" target="_blank" rel="noopener">ASL Kids</a><span class="kid">🧒 Kids</span><span class="desc">Kids' video dictionary app.</span></li>
+      <li><a href="https://www.signingtime.com/" target="_blank" rel="noopener">Signing Time</a><span class="kid">🧒 Kids</span><span class="desc">Videos and dictionary from the show.</span></li>
+      <li><a href="https://babysignlanguage.com/" target="_blank" rel="noopener">Baby Sign Language Dictionary</a><span class="kid">🧒 Kids</span><span class="desc">Baby and toddler signs.</span></li>
+      <li><a href="https://signitasl.com/" target="_blank" rel="noopener">Sign It ASL</a><span class="desc">App version of the course.</span></li>
+      <li><a href="https://www.asldeafined.com/" target="_blank" rel="noopener">ASL Deafined</a><span class="desc">App version of the lessons.</span></li>
+      <li><a href="https://www.signingsavvy.com/" target="_blank" rel="noopener">Signing Savvy Member App</a><span class="desc">Dictionary and word lists, needs a membership.</span></li>
+      <li><a href="https://play.google.com/store/search?q=Hands%20On%20ASL&c=apps" target="_blank" rel="noopener">Hands On ASL</a><span class="desc">3D hand you can spin to learn fingerspelling.</span></li>
+      <li><a href="https://play.google.com/store/search?q=Ace%20ASL&c=apps" target="_blank" rel="noopener">Ace ASL</a><span class="desc">The camera checks your fingerspelling.</span></li>
+      <li><a href="https://play.google.com/store/search?q=Pocket%20Sign%20ASL&c=apps" target="_blank" rel="noopener">Pocket Sign</a><span class="desc">Beginner lessons.</span></li>
+      <li><a href="https://www.spreadthesign.com/" target="_blank" rel="noopener">Spread the Sign</a><span class="desc">International dictionary app.</span></li>
+      <li><a href="https://play.google.com/store/search?q=ASL%20Dictionary%20Software%20Studios&c=apps" target="_blank" rel="noopener">ASL Dictionary</a><span class="desc">Paid dictionary app by Software Studios.</span></li>
+      <li><a href="https://play.google.com/store/search?q=InterSign%20ASL&c=apps" target="_blank" rel="noopener">InterSign ASL</a><span class="desc">Android lesson series.</span></li>
+    </ul>
+  </section>
+
+  <section id="grownups" class="grape">
+    <h2>For Grown-ups</h2>
+    <p class="sub">Curriculum, classes, and family resources.</p>
+    <ul class="links">
+      <li><a href="https://aslathome.org/" target="_blank" rel="noopener">ASL at Home</a><span class="desc">Curriculum for families of deaf children.</span></li>
+      <li><a href="https://www.dawnsign.com/" target="_blank" rel="noopener">DawnSignPress</a><span class="desc">Publisher of the Signing Naturally classroom curriculum.</span></li>
+      <li><a href="https://www.signingonline.com/" target="_blank" rel="noopener">SigningOnline</a><span class="desc">Paid online ASL courses.</span></li>
+      <li><a href="https://www.nad.org/" target="_blank" rel="noopener">National Association of the Deaf</a><span class="desc">Deaf community news and advocacy.</span></li>
+    </ul>
+  </section>
+
+  <p class="note">Duolingo does not offer ASL, so it is not on this list. Some app links go to a store search because the app has no website of its own.</p>
+
+  <footer>
+    <a class="back" href="index.html">← Back to the main page</a>
+  </footer>
+
+</main>
+</body>
+</html>

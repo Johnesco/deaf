@@ -255,6 +255,10 @@
     padding: .35rem 1.1rem;
   }
 
+  .cards.two {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+  }
+
   .span-all {
     grid-column: 1 / -1;
   }
@@ -283,15 +287,44 @@
     margin: 0 auto;
   }
 
-  footer {
+  .more-wrap {
     text-align: center;
-    margin-top: 3rem;
-    font-size: 1rem;
-    color: var(--ink-soft);
-    font-weight: 700;
+    margin: 0 0 3rem;
   }
 
-  footer a { text-decoration-thickness: 3px; text-underline-offset: 4px; }
+  .more {
+    display: inline-block;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.8rem, 5vw, 2.6rem);
+    text-decoration: none;
+    color: var(--ink);
+    background: var(--sun);
+    border: var(--border) solid var(--ink);
+    border-radius: 999px;
+    padding: .8rem 2.4rem;
+    box-shadow: 0 8px 0 var(--ink);
+    transition: transform .12s ease, box-shadow .12s ease;
+  }
+
+  .more:hover, .more:focus-visible {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 0 var(--ink);
+    outline: none;
+  }
+
+  .more:active {
+    transform: translateY(4px);
+    box-shadow: 0 3px 0 var(--ink);
+  }
+
+  .more-hint {
+    margin: 1rem auto 0;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--ink-soft);
+    max-width: 40ch;
+  }
 
   /* ---------- Motion ---------- */
   @keyframes wave {
@@ -399,6 +432,14 @@
           <span class="go">Open Signing Savvy →</span>
         </a>
       </li>
+      <li>
+        <a class="card sun" href="https://www.asl-kids.com/" target="_blank" rel="noopener">
+          <div class="icon" aria-hidden="true">🧒</div>
+          <h3>ASL Kids</h3>
+          <p>A dictionary where kids show you the signs. Made just for children.</p>
+          <span class="go">Open ASL Kids →</span>
+        </a>
+      </li>
     </ul>
   </section>
 
@@ -408,8 +449,24 @@
       <div class="badge" aria-hidden="true">🌐</div>
       <h2>Learning Websites</h2>
     </div>
-    <p class="section-blurb">Free lessons and games you can use on a computer or tablet.</p>
-    <ul class="cards">
+    <p class="section-blurb">Free lessons, songs, and games you can use on a computer or tablet.</p>
+    <ul class="cards two">
+      <li>
+        <a class="card coral" href="https://aslnook.com/" target="_blank" rel="noopener">
+          <div class="icon" aria-hidden="true">👨‍👩‍👧‍👧</div>
+          <h3>ASL Nook</h3>
+          <p>A Deaf family signs with their kids in short, silly, sweet videos. Perfect for little learners.</p>
+          <span class="go">Visit ASL Nook →</span>
+        </a>
+      </li>
+      <li>
+        <a class="card grape" href="https://www.signingtime.com/" target="_blank" rel="noopener">
+          <div class="icon" aria-hidden="true">🎵</div>
+          <h3>Signing Time</h3>
+          <p>Songs and shows that teach signs to kids. Sing along with Rachel and Hopkins the frog!</p>
+          <span class="go">Visit Signing Time →</span>
+        </a>
+      </li>
       <li>
         <a class="card peach" href="https://www.gallaudet.edu/asl-connect/" target="_blank" rel="noopener">
           <div class="icon" aria-hidden="true">🏫</div>
@@ -438,6 +495,14 @@
     <p class="section-blurb">Practice signs on a phone or tablet. Ask a grown-up to help install these.</p>
     <ul class="cards">
       <li>
+        <a class="card sky" href="https://www.aslbloom.com/" target="_blank" rel="noopener">
+          <div class="icon" aria-hidden="true">🌸</div>
+          <h3>ASL Bloom</h3>
+          <p>Learn signs like a game. Short lessons, fun quizzes, and lots of cheering when you get it right.</p>
+          <span class="go">Get ASL Bloom →</span>
+        </a>
+      </li>
+      <li>
         <a class="card coral" href="https://theaslapp.com/" target="_blank" rel="noopener">
           <div class="icon" aria-hidden="true">🤲</div>
           <h3>The ASL App</h3>
@@ -456,11 +521,12 @@
     </ul>
   </section>
 
-  <p class="note">🤟 This page has no lessons of its own. It's just a list of favorite places to learn. Every link opens a different website.</p>
+  <div class="more-wrap">
+    <a class="more" href="links.html">📚 More links</a>
+    <p class="more-hint">A longer list of every website, video channel, and app we found.</p>
+  </div>
 
-  <footer>
-    <p>🤟 means "I Love You" in ASL &middot; <a href="https://johnesco.github.io/">Back to Johnesco</a></p>
-  </footer>
+  <p class="note">🤟 This page has no lessons of its own. It's just a list of favorite places to learn. Every link opens a different website.</p>
 
 </main>
 </body>
